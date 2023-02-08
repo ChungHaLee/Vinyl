@@ -47,7 +47,7 @@ let vinylNameFirst;
 for (let i = 0; i < number_of_images; i++) {
     // Create a texture loader so we can load our image file
     loader = new THREE.TextureLoader();
-    let textureArray = ['./static/src/images/taylorswift.jpeg', './static/src/images/fearless.jpeg', './static/src/images/speaknow.jpeg', './static/src/images/1989.jpeg', './static/src/images/reputation.jpeg', './static/src/images/lover.jpeg', './static/src/images/evermore.jpeg', './static/src/images/midnights.jpeg']
+    let textureArray = ['./static/src/images/funk.jpeg', './static/src/images/gloria.jpeg', './static/src/images/inlove.jpeg', './static/src/images/mac.jpeg', './static/src/images/midnights.jpeg', './static/src/images/SOS.jpeg', './static/src/images/trolls.jpeg', './static/src/images/yessie.jpeg']
     texture = loader.load(textureArray[i]);
     texture.minFilter = THREE.LinearFilter;
 
