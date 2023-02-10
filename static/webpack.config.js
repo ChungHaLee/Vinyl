@@ -6,7 +6,7 @@ module.exports = {
     entry: {
         main: path.resolve(__dirname, "src", "js", "example.js"),
         wheel: path.resolve(__dirname, "src", "js", "wheel.js"),
-        vinyl: path.resolve(__dirname, "src", "js", "vinyl.js")
+        vanta: path.resolve(__dirname, "src", "js", "vanta.js")
     },
     mode: "development",
     target: "web",

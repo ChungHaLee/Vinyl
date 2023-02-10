@@ -30,9 +30,11 @@
         "@tonaljs/scale-type": "^4.8.0",
         "@tonaljs/time-signature": "^4.8.0",
         "paper": "^0.12.17",
+        "particle.js": "^1.0.7",
         "pitchfinder": "^2.3.2",
         "three": "^0.148.0",
         "tonal": "^4.8.0",
+        "vanta": "^0.5.24",
         "wav-decoder": "^1.3.0",
         "yargs": "^17.6.2",
         "yargs-parser": "^21.1.1"

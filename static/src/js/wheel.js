@@ -26,19 +26,7 @@ let vinylNameOrigin;
 let vinylNameFirst;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+let vantaCanvas = document.getElementsByClassName('vanta-canvas');
 
 
 
@@ -95,8 +83,9 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 
 
+
 // Add the canvas to the DOM
-document.querySelector('body').appendChild(renderer.domElement);
+document.querySelector('#vanta-background').appendChild(renderer.domElement);
 
 window.addEventListener('wheel', event => {
     scrollSpeed = event.deltaY * (Math.PI / 180) * 0.4;
@@ -132,17 +121,24 @@ function raycasters() {
 
 	// calculate objects intersecting the picking ray
 	let intersects = raycaster.intersectObjects( groupCards.children );
-    // for 문이 아니라 내가 클릭한 것으로 수정
+
+
+    // for 문이 아니라 내가 클릭한 바이닐로 수정
     if (intersects.length == 1){
         intersects[0].object.scale.set(1.5, 1.5, 1.5);
         vinylNameFirst = intersects[0].object.name
         onPointerReset(); // pointer reset
     }
+
     if (vinylNameFirst != undefined) {
         for (let i = 0; i < groupCards.children.length; i ++) {
             if (vinylNameFirst != i) {
                 groupCards.children[i].material.visible = false
                 groupCards.children[vinylNameFirst].material.visible = true
+            } else if (i == 4){
+                vinylNameOrigin = 'midnights';
+                vantaCanvas[0].style.visibility = 'visible';
+                
             }
         }
     }
@@ -168,5 +164,4 @@ animate();
 
 
 
-// window.addEventListener( 'mouseup', onPointerMove );
-// window.requestAnimationFrame(render);
+export { vinylNameOrigin }
