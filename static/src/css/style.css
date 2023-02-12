@@ -1,6 +1,44 @@
+/* this is for three js full screen */
+* {
+    margin: 0;
+    padding: 0;
+ }
+ 
+ body, html {
+    overflow: hidden;
+    height:100%;
+ }
+
+ canvas {
+    position:absolute;
+    height:100%; width:100%;
+ }
+
+ div#particles-js{
+    visibility: visible;
+ }
+
 canvas.vanta-canvas{
     visibility: hidden;
     position: relative;
+}
+
+
+#particles-js {
+    /* visibility: hidden; */
+    position: absolute;
     width: 100%;
     height: 100%;
+    /* background-color: #022328; */
+    /* background-image: url("https://i.pinimg.com/originals/60/4e/e4/604ee4e00aa36cdc9197d3f2a7e49b10.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    z-index: 1; */
+  }
+
+
+.particles-js-canvas-el{
+   visibility: hidden;
+   background-color: #160d0d;
 }

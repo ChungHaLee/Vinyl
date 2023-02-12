@@ -3,8 +3,8 @@ const lavender = VANTA.FOG({
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
+    minHeight: 1500.00,
+    minWidth: 1000.00,
     highlightColor: 0x7f53f7,
     midtoneColor: 0xa16dde,
     lowlightColor: 0x473fcd,
@@ -18,4 +18,5 @@ const lavender = VANTA.FOG({
 
 
 
-export { lavender }
+
+// export { lavender }

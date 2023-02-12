@@ -14,6 +14,9 @@ const center_of_wheel = { x: 0, y: 0 }
 
 const groupCards = new THREE.Group();
 
+const lavenderHaze = new Audio('static/src/audio/LavenderHaze.mp3');
+const forever = new Audio('static/src/audio/Forever.mp3');
+
 let scrollSpeed = 0.0;
 let loader = null;
 let texture = null;
@@ -28,7 +31,7 @@ let vinylNameFirst;
 
 let vantaCanvas = document.getElementsByClassName('vanta-canvas');
 
-
+let particleCanvas = document.getElementsByClassName('particles-js-canvas-el');
 
 
 
@@ -68,7 +71,7 @@ for (let i = 0; i < number_of_images; i++) {
 
 
 // Specify the portion of the scene visible at any time (in degrees)
-let fieldOfView = 75;
+let fieldOfView = 80;
 
 let aspectRatio = window.innerWidth / window.innerHeight;
 let nearPlane = 0.1;
@@ -136,8 +139,15 @@ function raycasters() {
                 groupCards.children[i].material.visible = false
                 groupCards.children[vinylNameFirst].material.visible = true
             } else if (i == 4){
-                vinylNameOrigin = 'midnights';
+                // vinylNameOrigin = 'midnights';
                 vantaCanvas[0].style.visibility = 'visible';
+                lavenderHaze.play();
+                forever.pause();
+                
+            } else if (i == 7){
+                particleCanvas[0].style.visibility = 'visible';
+                forever.play();
+                lavenderHaze.pause();
                 
             }
         }

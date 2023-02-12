@@ -25,10 +25,10 @@ function init() {
     renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setClearColor(0x000000, 0);
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(900, 700);
+    // renderer.setSize(600, 300);
     
     camera = new THREE.PerspectiveCamera(30, renderer.domElement.width/renderer.domElement.height, 2, 2000);
-    camera.position.set(1, 10, 30);
+    camera.position.set(1, 0, 30);
   
     container = document.getElementById( "canvas" );
     
@@ -52,7 +52,7 @@ function init() {
   
   
     controls = new OrbitControls( camera, container );
-    // controls.update(); 요소가 움직이지 않게 함...
+    controls.update(); 
   
     createVinyl();
     // createVinylCenter();
@@ -67,7 +67,7 @@ function createVinyl(){
     material = new THREE.MeshBasicMaterial( { map: vinylCover
      } );
     compoCenter = new THREE.Mesh(geometry, material);
-    compoCenter.position.set(1, 0, 0);
+    compoCenter.position.set(0, 0, 0);
   
     spotLight.lookAt(compoCenter);
     pointLight = new THREE.PointLight(0xffffff, 1);

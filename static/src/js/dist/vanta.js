@@ -7,60 +7,26 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/js/vanta.js":
 /*!*************************!*\
   !*** ./src/js/vanta.js ***!
   \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"lavender\": () => (/* binding */ lavender)\n/* harmony export */ });\nconst lavender = VANTA.FOG({\n    el: \"#vanta-background\",\n    mouseControls: true,\n    touchControls: true,\n    gyroControls: false,\n    minHeight: 200.00,\n    minWidth: 200.00,\n    highlightColor: 0x7f53f7,\n    midtoneColor: 0xa16dde,\n    lowlightColor: 0x473fcd,\n    baseColor: 0x463546,\n    blurFactor: 0.24,\n    speed: 3.60,\n    zoom: 2.30\n })\n\n\n\n\n\n\n\n\n//# sourceURL=webpack://Vinyl/./src/js/vanta.js?");
+eval("const lavender = VANTA.FOG({\n    el: \"#vanta-background\",\n    mouseControls: true,\n    touchControls: true,\n    gyroControls: false,\n    minHeight: 1500.00,\n    minWidth: 1000.00,\n    highlightColor: 0x7f53f7,\n    midtoneColor: 0xa16dde,\n    lowlightColor: 0x473fcd,\n    baseColor: 0x463546,\n    blurFactor: 0.24,\n    speed: 3.60,\n    zoom: 2.30\n })\n\n\n\n\n\n\n// export { lavender }\n\n\n//# sourceURL=webpack://Vinyl/./src/js/vanta.js?");
 
 /***/ })
 
 /******/ 	});
-/************************************************************************/
-/******/ 	// The require scope
-/******/ 	var __webpack_require__ = {};
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/js/vanta.js"](0, __webpack_exports__, __webpack_require__);
+/******/ 	__webpack_modules__["./src/js/vanta.js"]();
 /******/ 	
 /******/ })()
 ;
