@@ -29,6 +29,7 @@
         "@tonaljs/scale": "^4.8.0",
         "@tonaljs/scale-type": "^4.8.0",
         "@tonaljs/time-signature": "^4.8.0",
+        "ignore-warnings": "^0.2.1",
         "paper": "^0.12.17",
         "particle.js": "^1.0.7",
         "particles.js": "^2.0.0",

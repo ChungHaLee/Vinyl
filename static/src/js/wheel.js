@@ -1,7 +1,5 @@
 import { TextureLoader } from "three";
-import { meydaAnalyser } from './audio.js';
-
-// console.log(meydaAnalyser)
+import { meydaAnalyser } from "./audio";
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 const raycaster = new THREE.Raycaster();
@@ -20,6 +18,11 @@ const groupCards = new THREE.Group();
 const lavenderHaze = new Audio('static/src/audio/LavenderHaze.mp3');
 const forever = new Audio('static/src/audio/Forever.mp3');
 
+let FrameRate = 0;
+let analyser, src, bufferLength, dataArray, audio_context;
+let chroma, maxChroma, energy, amplitudeSpectrum;
+
+
 let scrollSpeed = 0.0;
 let loader = null;
 let texture = null;
@@ -31,7 +34,7 @@ let audio = '';
 // let src, audio_context;
 
 
-let vinylNameOrigin;
+
 let vinylNameFirst;
 
 
@@ -111,6 +114,8 @@ window.addEventListener('wheel', event => {
 
 
 
+
+
 function onPointerMove( event ) {
 	// calculate pointer position in normalized device coordinates
 	// (-1 to +1) for both components
@@ -126,6 +131,7 @@ function onPointerReset( event ){
 
 
 function raycasters() {
+
 	// update the picking ray with the camera and pointer position
 	raycaster.setFromCamera( pointer, camera );
 
@@ -136,7 +142,7 @@ function raycasters() {
     // for 문이 아니라 내가 클릭한 바이닐로 수정
     if (intersects.length == 1){
         intersects[0].object.scale.set(1.5, 1.5, 1.5);
-        vinylNameFirst = intersects[0].object.name
+        vinylNameFirst = intersects[0].object.name; 
         onPointerReset(); // pointer reset
     }
 
@@ -146,25 +152,45 @@ function raycasters() {
             if (vinylNameFirst != i) {
                 groupCards.children[i].material.visible = false
                 groupCards.children[vinylNameFirst].material.visible = true
+
             } else if (i == 4){
-                // vinylNameOrigin = 'midnights';
                 vantaCanvas[0].style.visibility = 'visible';
-                audio = lavenderHaze
-                meydaAnalyser(audio);
-                // audio.play();
-                forever.pause();
                 
             } else if (i == 7){
                 particleCanvas[0].style.visibility = 'visible';
-                audio = forever
-                meydaAnalyser(audio);
-                // audio.play();
-                lavenderHaze.pause();
                 
             }
+    
         }
     }
 }
+
+
+
+function gubunja() {
+    if (vinylNameFirst != undefined) {
+        for (let i = 0; i < groupCards.children.length; i ++) {
+            
+            if (vinylNameFirst != i) {
+                groupCards.children[i].material.visible = false
+                groupCards.children[vinylNameFirst].material.visible = true
+            } else if (i == 4){
+                vinylNameOrigin = 'lavenderHaze';
+                audio = lavenderHaze;
+                
+            } else if (i == 7){
+                vinylNameOrigin = 'forever';
+                audio = forever;
+
+            }
+        }
+        meydaAnalyser(audio)
+    }
+    
+    // return vinylNameOrigin;
+}
+
+
 
 
 
@@ -173,14 +199,21 @@ function render() {
 }
 
 
+
+
+
 function animate() {
     requestAnimationFrame(animate);
     window.addEventListener( 'click', onPointerMove );
-    raycasters();
-    render();
+    FrameRate = FrameRate + 1
+    if (FrameRate % 300 == 0){
+        raycasters();
+        render();
+        gubunja();
+    }
 }
 
 
-
 animate();
+
 
