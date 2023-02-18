@@ -15,7 +15,7 @@
   \*************************/
 /***/ (() => {
 
-eval("const lavender = VANTA.FOG({\n    el: \"#vanta-background\",\n    mouseControls: true,\n    touchControls: true,\n    gyroControls: false,\n    minHeight: 1500.00,\n    minWidth: 1000.00,\n    highlightColor: 0x7f53f7,\n    midtoneColor: 0xa16dde,\n    lowlightColor: 0x473fcd,\n    baseColor: 0x463546,\n    blurFactor: 0.24,\n    speed: 3.60,\n    zoom: 2.30\n })\n\n\n\n\n\n\n// export { lavender }\n\n\n//# sourceURL=webpack://Vinyl/./src/js/vanta.js?");
+eval("const lavender = VANTA.FOG({\n    el: \"#vanta-background\",\n    mouseControls: true,\n    touchControls: true,\n    gyroControls: false,\n    minHeight: 1500.00,\n    minWidth: 1000.00,\n    highlightColor: 0x7f53f7,\n    midtoneColor: 0xa16dde,\n    lowlightColor: 0x473fcd,\n    baseColor: 0x463546,\n    blurFactor: 0.24,\n    speed: 3.60,\n    zoom: 2.30\n })\n\n\n\n\n\n//# sourceURL=webpack://Vinyl/./src/js/vanta.js?");
 
 /***/ })
 

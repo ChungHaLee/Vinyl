@@ -16,7 +16,3 @@ const lavender = VANTA.FOG({
 
 
 
-
-
-
-// export { lavender }

@@ -1,4 +1,7 @@
 import { TextureLoader } from "three";
+import { meydaAnalyser } from './audio.js';
+
+// console.log(meydaAnalyser)
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 const raycaster = new THREE.Raycaster();
@@ -24,6 +27,9 @@ let material = null;
 let circle = null;
 let mesh = null;
 
+let audio = '';
+// let src, audio_context;
+
 
 let vinylNameOrigin;
 let vinylNameFirst;
@@ -36,6 +42,7 @@ let particleCanvas = document.getElementsByClassName('particles-js-canvas-el');
 
 
 for (let i = 0; i < number_of_images; i++) {
+    
     // Create a texture loader so we can load our image file
     loader = new THREE.TextureLoader();
     let textureArray = ['./static/src/images/funk.jpeg', './static/src/images/gloria.jpeg', './static/src/images/inlove.jpeg', './static/src/images/mac.jpeg', './static/src/images/midnights.jpeg', './static/src/images/SOS.jpeg', './static/src/images/trolls.jpeg', './static/src/images/yessie.jpeg']
@@ -135,18 +142,23 @@ function raycasters() {
 
     if (vinylNameFirst != undefined) {
         for (let i = 0; i < groupCards.children.length; i ++) {
+            
             if (vinylNameFirst != i) {
                 groupCards.children[i].material.visible = false
                 groupCards.children[vinylNameFirst].material.visible = true
             } else if (i == 4){
                 // vinylNameOrigin = 'midnights';
                 vantaCanvas[0].style.visibility = 'visible';
-                lavenderHaze.play();
+                audio = lavenderHaze
+                meydaAnalyser(audio);
+                // audio.play();
                 forever.pause();
                 
             } else if (i == 7){
                 particleCanvas[0].style.visibility = 'visible';
-                forever.play();
+                audio = forever
+                meydaAnalyser(audio);
+                // audio.play();
                 lavenderHaze.pause();
                 
             }
@@ -172,6 +184,3 @@ function animate() {
 
 animate();
 
-
-
-export { vinylNameOrigin }

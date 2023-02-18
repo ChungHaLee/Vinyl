@@ -7,7 +7,8 @@ module.exports = {
         main: path.resolve(__dirname, "src", "js", "example.js"),
         wheel: path.resolve(__dirname, "src", "js", "wheel.js"),
         vanta: path.resolve(__dirname, "src", "js", "vanta.js"),
-        particle: path.resolve(__dirname, "src", "js", "app.js")
+        particle: path.resolve(__dirname, "src", "js", "app.js"),
+        audio: path.resolve(__dirname, "src", "js", "audio.js")
     },
     mode: "development",
     target: "web",
