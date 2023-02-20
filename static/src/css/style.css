@@ -20,6 +20,11 @@
  }
 
 
+ label {
+   display: none;
+ }
+
+
  div#particles-js{
     visibility: visible;
  }
@@ -27,6 +32,10 @@
 canvas.vanta-canvas{
     visibility: hidden;
     position: relative;
+}
+
+canvas#pt_canvas{
+   visibility: hidden;
 }
 
 

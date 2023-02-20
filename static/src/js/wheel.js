@@ -1,5 +1,9 @@
 import { TextureLoader } from "three";
-import { meydaAnalyser } from "./audio";
+import { sparkling, startFauxClicking, fauxClick } from './sparkle.js'
+import { rectangle } from './rectangle.js'
+import { energy } from './audio.js'
+import { gubunja_chaosSizeBig } from './vanta.js'
+
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 const raycaster = new THREE.Raycaster();
@@ -15,13 +19,17 @@ const center_of_wheel = { x: 0, y: 0 }
 
 const groupCards = new THREE.Group();
 
-const lavenderHaze = new Audio('static/src/audio/LavenderHaze.mp3');
-const forever = new Audio('static/src/audio/Forever.mp3');
+const lavenderHazeButton = document.getElementById('lavenderHaze');
+const foreverButton = document.getElementById('forever');
+const goodDaysButton = document.getElementById('goodDays');
+const obsessedButton = document.getElementById('obsessed');
+const theothersideButton = document.getElementById('theotherside');
+const dreamsButton = document.getElementById('dreams');
 
-let FrameRate = 0;
-let analyser, src, bufferLength, dataArray, audio_context;
-let chroma, maxChroma, energy, amplitudeSpectrum;
 
+
+
+let width, height;
 
 let scrollSpeed = 0.0;
 let loader = null;
@@ -30,17 +38,16 @@ let material = null;
 let circle = null;
 let mesh = null;
 
-let audio = '';
-// let src, audio_context;
+let FrameRate = 0;
 
 
 
-let vinylNameFirst;
+var vinylNameFirst;
 
 
 let vantaCanvas = document.getElementsByClassName('vanta-canvas');
-
 let particleCanvas = document.getElementsByClassName('particles-js-canvas-el');
+let ptCanvas = document.getElementById('pt_canvas');
 
 
 
@@ -48,7 +55,7 @@ for (let i = 0; i < number_of_images; i++) {
     
     // Create a texture loader so we can load our image file
     loader = new THREE.TextureLoader();
-    let textureArray = ['./static/src/images/funk.jpeg', './static/src/images/gloria.jpeg', './static/src/images/inlove.jpeg', './static/src/images/mac.jpeg', './static/src/images/midnights.jpeg', './static/src/images/SOS.jpeg', './static/src/images/trolls.jpeg', './static/src/images/yessie.jpeg']
+    let textureArray = ['./static/src/images/funk.jpeg', './static/src/images/gloria.jpeg', './static/src/images/inlove.jpeg', './static/src/images/mac.jpeg', './static/src/images/midnights.jpeg', './static/src/images/gooddays.jpeg', './static/src/images/trolls.jpeg', './static/src/images/yessie.jpeg']
     texture = loader.load(textureArray[i]);
     texture.minFilter = THREE.LinearFilter;
 
@@ -153,42 +160,78 @@ function raycasters() {
                 groupCards.children[i].material.visible = false
                 groupCards.children[vinylNameFirst].material.visible = true
 
+            } else if (i == 0){
+                vantaCanvas[0].style.visibility = 'visible';
+                obsessedButton.play();
+            
+
+            } else if (i == 3){
+                vantaCanvas[1].style.visibility = 'visible';
+                dreamsButton.play();
+            
+
             } else if (i == 4){
                 vantaCanvas[0].style.visibility = 'visible';
-                
-            } else if (i == 7){
-                particleCanvas[0].style.visibility = 'visible';
-                
-            }
-    
-        }
-    }
-}
-
-
-
-function gubunja() {
-    if (vinylNameFirst != undefined) {
-        for (let i = 0; i < groupCards.children.length; i ++) {
+                lavenderHazeButton.play();
             
-            if (vinylNameFirst != i) {
-                groupCards.children[i].material.visible = false
-                groupCards.children[vinylNameFirst].material.visible = true
-            } else if (i == 4){
-                vinylNameOrigin = 'lavenderHaze';
-                audio = lavenderHaze;
-                
-            } else if (i == 7){
-                vinylNameOrigin = 'forever';
-                audio = forever;
 
+            }  else if (i == 5){
+                vantaCanvas[0].style.visibility = 'visible';
+                goodDaysButton.play();
+                
+            }  else if (i == 6){
+                ptCanvas.style.visibility = 'visible';
+                theothersideButton.play();
+                
+
+            }  else if (i == 7){
+                particleCanvas[0].style.visibility = 'visible';
+                foreverButton.play();
+                
             }
-        }
-        meydaAnalyser(audio)
-    }
     
-    // return vinylNameOrigin;
+        }
+    }
 }
+
+  
+export async function allSettledPromises () {
+    const promises = Array(1).fill(0).map(() => waiting())
+    const result = []
+    try {
+        const promiseResult = await Promise.allSettled(promises)
+        result.push(...promiseResult)
+        // console.log(promiseResult)
+    } catch (e) {
+        console.error(`error on ${e}`)
+    }
+
+}
+  
+
+
+
+// function waiting(){
+//     if (vinylNameFirst != undefined) {
+//         for (let i = 0; i < groupCards.children.length; i ++) {
+//             if (vinylNameFirst != i) {
+//                 groupCards.children[i].material.visible = false
+//                 groupCards.children[vinylNameFirst].material.visible = true
+//             } else if (i == 4){
+//                 vinylNameOrigin = 'lavenderHaze'
+//                 audio = lavenderHaze
+
+//             } else if (i == 7){
+//                 vinylNameOrigin = 'forever'
+//                 audio = forever
+
+//             }
+//         }
+//     } 
+//     return vinylNameOrigin;
+// }
+
+
 
 
 
@@ -201,19 +244,34 @@ function render() {
 
 
 
-
 function animate() {
     requestAnimationFrame(animate);
     window.addEventListener( 'click', onPointerMove );
+    raycasters();
+    render();
+    sparkling();
+
+    // the other side
     FrameRate = FrameRate + 1
-    if (FrameRate % 300 == 0){
-        raycasters();
-        render();
-        gubunja();
+    // 이 부분을 pitch 랑 매핑
+    if (FrameRate % 8 == 0){
+        width = window.innerWidth/2
+        height = (energy * 2)
+        // console.log(height);
+        rectangle(width, height);
+    
     }
+
+    // obsessed
+    if (energy > 20) {
+       startFauxClicking();
+    //    gubunja_chaosSizeBig();
+    }
+    // console.log(energy)
 }
 
 
+// waiting();
 animate();
 
 

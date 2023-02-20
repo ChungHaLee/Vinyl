@@ -1,15 +1,46 @@
 'use strict';
-let answer;
+
+
+let audio, file;
 let analyser, src, bufferLength, dataArray, audio_context;
-let chroma, maxChroma, energy, amplitudeSpectrum, audio;
+let chroma, maxChroma, energy, amplitudeSpectrum;
+
+
+const lavenderHazeButton = document.getElementById('lavenderHaze')
+lavenderHazeButton.addEventListener('play', function() {
+    meydaAnalyser(lavenderHazeButton);
+});
+
+
+const foreverButton = document.getElementById('forever')
+foreverButton.addEventListener('play', function() {
+    meydaAnalyser(forever);
+});
+
+const goodDaysButton = document.getElementById('goodDays')
+goodDaysButton.addEventListener('play', function() {
+    meydaAnalyser(goodDays);
+});
+
+
+const obsessedButton = document.getElementById('obsessed')
+obsessedButton.addEventListener('play', function() {
+    meydaAnalyser(obsessed);
+});
+
+
+const theothersideButton = document.getElementById('theotherside')
+theothersideButton.addEventListener('play', function() {
+    meydaAnalyser(theotherside);
+});
 
 
 
-const lavenderHaze = new Audio('static/src/audio/LavenderHaze.mp3');
-const forever = new Audio('static/src/audio/Forever.mp3');
+
+
 
 function meydaAnalyser(audio) {
-    // identifier();
+    
     audio_context = audio_context || new AudioContext();
     if (!src) {
         analyser = audio_context.createAnalyser();
@@ -17,12 +48,8 @@ function meydaAnalyser(audio) {
         src.connect(analyser);
         analyser.connect(audio_context.destination)
     }
-    // audio.volume = 0.4;
 
-    // chroma = 0;
-    // maxChroma = 0;
     energy = 0;
-    // amplitudeSpectrum = 0;
 
     const meyda_analyser = Meyda.createMeydaAnalyzer({
         audioContext: audio_context,
@@ -31,18 +58,17 @@ function meydaAnalyser(audio) {
         featureExtractors: ["energy"],
         callback: (features) => {
             energy = features['energy']
-            console.log('energy', energy.toFixed(2))
-            if (energy.toFixed(2) > 50){
-                console.log('*********강조*********')
-            }
+            // console.log('energy', energy.toFixed(2))
+            // if (energy.toFixed(2) > 50){
+            //     console.log('*********강조*********')
+            // }
         }
     })
 
     meyda_analyser.start();
-    audio.play();
-
-}
+};
 
 
 
-export { meydaAnalyser }
+
+export { meydaAnalyser, energy }
