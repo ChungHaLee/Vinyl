@@ -2,7 +2,7 @@ import { TextureLoader } from "three";
 import { sparkling, startFauxClicking, fauxClick } from './sparkle.js'
 import { rectangle } from './rectangle.js'
 import { energy } from './audio.js'
-import { gubunja_chaosSizeBig } from './vanta.js'
+// import { gubunja_chaosSizeBig } from './vanta.js'
 
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
@@ -46,6 +46,7 @@ var vinylNameFirst;
 
 
 let vantaCanvas = document.getElementsByClassName('vanta-canvas');
+let vantaCanvasP5 = document.getElementsByClassName('p5Canvas vanta-canvas');
 let particleCanvas = document.getElementsByClassName('particles-js-canvas-el');
 let ptCanvas = document.getElementById('pt_canvas');
 
@@ -166,7 +167,7 @@ function raycasters() {
             
 
             } else if (i == 3){
-                vantaCanvas[1].style.visibility = 'visible';
+                vantaCanvasP5.style.visibility = 'visible';
                 dreamsButton.play();
             
 

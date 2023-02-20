@@ -49,8 +49,8 @@ const dreams = VANTA.TRUNK({
     scaleMobile: 1.00,
     color: 0x642e11,
     backgroundColor: 0xf0c25a,
-    spacing: 2.00,
-    chaos: 4,
+    spacing: 10.00,
+    chaos: 2,
     p5: p5
   })
 
@@ -74,22 +74,3 @@ dreamsButton.addEventListener('play', function() {
    lavenderHaze.destroy();
    goodDays.destroy();
 });
-
-
-
-
-function gubunja_chaosSizeBig(){
-    dreams.setOptions({
-        chaos: 7
-    })
-}
-
-
-// function gubunja_chaosSizeSmall(){
-//     dreams.setOptions({
-//         chaos: 7
-//     })
-// }
-
-
-export { gubunja_chaosSizeBig }
