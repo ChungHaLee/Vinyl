@@ -10,7 +10,8 @@ module.exports = {
         particle: path.resolve(__dirname, "src", "js", "app.js"),
         audio: path.resolve(__dirname, "src", "js", "audio.js"),
         sparkle: path.resolve(__dirname, "src", "js", "sparkle.js"),
-        rectangle: path.resolve(__dirname, "src", "js", "rectangle.js")
+        rectangle: path.resolve(__dirname, "src", "js", "rectangle.js"),
+        text :path.resolve(__dirname, "src", "js", "text.js"),
     },
     mode: "development",
     target: "web",

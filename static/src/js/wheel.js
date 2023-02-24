@@ -2,7 +2,7 @@ import { TextureLoader } from "three";
 import { sparkling, startFauxClicking, fauxClick } from './sparkle.js'
 import { rectangle } from './rectangle.js'
 import { energy } from './audio.js'
-// import { gubunja_chaosSizeBig } from './vanta.js'
+import { lavenderHazeTextFunc } from './text.js' 
 
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
@@ -24,10 +24,7 @@ const foreverButton = document.getElementById('forever');
 const goodDaysButton = document.getElementById('goodDays');
 const obsessedButton = document.getElementById('obsessed');
 const theothersideButton = document.getElementById('theotherside');
-const dreamsButton = document.getElementById('dreams');
-
-
-
+const superloveButton = document.getElementById('superlove');
 
 let width, height;
 
@@ -56,7 +53,7 @@ for (let i = 0; i < number_of_images; i++) {
     
     // Create a texture loader so we can load our image file
     loader = new THREE.TextureLoader();
-    let textureArray = ['./static/src/images/funk.jpeg', './static/src/images/gloria.jpeg', './static/src/images/inlove.jpeg', './static/src/images/mac.jpeg', './static/src/images/midnights.jpeg', './static/src/images/gooddays.jpeg', './static/src/images/trolls.jpeg', './static/src/images/yessie.jpeg']
+    let textureArray = ['./static/src/images/funk.jpeg', './static/src/images/gloria.jpeg', './static/src/images/tinashe.jpeg', './static/src/images/mac.jpeg', './static/src/images/midnights.jpeg', './static/src/images/gooddays.jpeg', './static/src/images/trolls.jpeg', './static/src/images/yessie.jpeg']
     texture = loader.load(textureArray[i]);
     texture.minFilter = THREE.LinearFilter;
 
@@ -161,18 +158,20 @@ function raycasters() {
                 groupCards.children[i].material.visible = false
                 groupCards.children[vinylNameFirst].material.visible = true
 
-            } else if (i == 0){
+            }  else if (i == 0){
                 vantaCanvas[0].style.visibility = 'visible';
                 obsessedButton.play();
             
 
-            } else if (i == 3){
-                vantaCanvasP5.style.visibility = 'visible';
-                dreamsButton.play();
-            
+            }  else if (i == 2){
+                particleCanvas[0].style.visibility = 'visible';
+                superloveButton.play();
+                particleCanvas[0].style.backgroundColor = '#ff6693'
+                particleCanvas[0].style.backgroundImage = "url('https://shkspr.mobi/blog/wp-content/uploads/2015/02/loop2.gif')"
 
-            } else if (i == 4){
+            }  else if (i == 4){
                 vantaCanvas[0].style.visibility = 'visible';
+                // lavenderHazeTextFunc();
                 lavenderHazeButton.play();
             
 
@@ -188,6 +187,8 @@ function raycasters() {
             }  else if (i == 7){
                 particleCanvas[0].style.visibility = 'visible';
                 foreverButton.play();
+                particleCanvas[0].style.backgroundColor = '#090909'
+                particleCanvas[0].style.backgroundImage = ''
                 
             }
     

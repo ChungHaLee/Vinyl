@@ -1,3 +1,19 @@
+const vinylDefault = VANTA.TRUNK({
+    el: "#vanta-background",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 1300.00,
+    minWidth: 800.00,
+    scale: 1.0,
+    color: 0xf2be69,
+    backgroundColor: 0x3083ff,
+    spacing: 0.00,
+    chaos: 0,
+    p5: p5
+  })
+
+
 const lavenderHaze = VANTA.FOG({
     el: "#vanta-background",
     mouseControls: true,
@@ -20,8 +36,8 @@ const goodDays = VANTA.BIRDS({
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
-    minHeight: 900.00,
-    minWidth: 800.00,
+    minHeight: 1500.00,
+    minWidth: 1000.00,
     scale: 1.00,
     scaleMobile: 1.00,
     backgroundColor: 0x849184,
@@ -38,26 +54,26 @@ const goodDays = VANTA.BIRDS({
 })
 
 
-const dreams = VANTA.TRUNK({
-    el: "#vanta-background",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 900.00,
-    minWidth: 800.00,
-    scale: 1.00,
-    scaleMobile: 1.00,
-    color: 0x642e11,
-    backgroundColor: 0xf0c25a,
-    spacing: 10.00,
-    chaos: 2,
-    p5: p5
-  })
+// const dreams = VANTA.TRUNK({
+//     el: "#vanta-background",
+//     mouseControls: true,
+//     touchControls: true,
+//     gyroControls: false,
+//     minHeight: 900.00,
+//     minWidth: 800.00,
+//     scale: 1.00,
+//     scaleMobile: 1.00,
+//     color: 0x642e11,
+//     backgroundColor: 0xf0c25a,
+//     spacing: 10.00,
+//     chaos: 2,
+//     p5: p5
+//   })
 
 
 const lavenderHazeButton = document.getElementById('lavenderHaze')
 lavenderHazeButton.addEventListener('play', function() {
-    dreams.destroy();
+    vinylDefault.destroy();
     goodDays.destroy();
 });
 
@@ -65,12 +81,14 @@ lavenderHazeButton.addEventListener('play', function() {
 const goodDaysButton = document.getElementById('goodDays')
 goodDaysButton.addEventListener('play', function() {
    lavenderHaze.destroy();
-   dreams.destroy();
+   vinylDefault.destroy();
 });
 
 
-const dreamsButton = document.getElementById('dreams')
-dreamsButton.addEventListener('play', function() {
-   lavenderHaze.destroy();
-   goodDays.destroy();
+const foreverButton = document.getElementById('forever')
+foreverButton.addEventListener('play', function() {
+    vinylDefault.destroy();
+    lavenderHaze.destroy();
+    goodDays.destroy();
+    
 });
