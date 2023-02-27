@@ -29,6 +29,15 @@
     visibility: visible;
  }
 
+ /* div#vanta-background:nth-child(1){
+   z-index: 4
+ }
+
+ div#vanta-background:nth-child(1){
+   z-index: 5
+ } */
+
+
 canvas.vanta-canvas{
     visibility: hidden;
     position: relative;
@@ -60,7 +69,7 @@ canvas.particles-js-canvas-el{
     background-repeat: no-repeat;
     background-size: 40%;
     background-position: 50%;
-    z-index: 1;
+    /* z-index: 1; */
   }
 
 
@@ -68,3 +77,35 @@ canvas.particles-js-canvas-el{
    visibility: hidden;
    background-color: #160d0d;
 } */
+
+/* h1{
+   display: inline-block;
+} */
+
+span{
+   position: relative;
+   z-index: 1;
+}
+
+#text-lavenderHaze{
+   font-family: 'Gloock', serif;
+   visibility: hidden;
+   z-index: 1;
+   color: white;
+   margin-top: 20%;
+   text-align: center;
+}
+
+.ml13 {
+   z-index: 1;
+   font-size: 60.0 em;
+   letter-spacing: 0.7em;
+   font-weight: 600;
+   background-color: transparent;
+ }
+ 
+ .ml13 .letter {
+   z-index: 1;
+   display: inline-block;
+   line-height: 1em;
+ }

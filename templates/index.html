@@ -10,16 +10,12 @@
 </head>
 
 <body>
-    <!-- <div id="canvas"></div> -->
     <div id="particles-js"></div>
  
-    <!-- <audio id="audio" controls></audio> -->
+
     <div id="vanta-background"></div>
 
-    <!-- <script src="particles.js"></script> -->
-    <script type='text/javascript' > 
-        var vinylNameOrigin;
-    </script>
+
 
     <label for="thefile" class="file">
         <input class="upload-name" type="file" id="thefile" accept="audio/mp3" />
@@ -29,6 +25,13 @@
     <div id="pt">
         <canvas id="pt_canvas"></canvas>
     </div>
+
+
+    <!-- lyrics text -->
+    <div id="text-lavenderHaze">
+        <h1 class="ml13">Lavender Haze</h1>
+    </div>
+
 
     <audio class='audios' id ='lavenderHaze' src="static/src/audio/LavenderHaze.mp3" controls></audio>
     <audio class='audios' id ='forever' src="static/src/audio/FOREVER.mp3" controls></audio>
@@ -53,12 +56,13 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/blotter.js@0.1.0/build/blotter.min.js"></script> -->
     <script src="https://unpkg.com/meyda/dist/web/meyda.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script type="module" defer src="./static/src/js/dist/wheel.js"></script>
     <script type="module" defer src="./static/src/js/dist/particle.js"></script>
     <script type="module" defer src="./static/src/js/dist/vanta.js"></script>
     <script type="module" defer src="./static/src/js/dist/audio.js"></script>
     <script type="module" defer src="./static/src/js/dist/sparkle.js"></script>
     <script type="module" defer src="./static/src/js/dist/rectangle.js"></script>
+    <script type="module" defer src="./static/src/js/dist/textAnimate.js"></script>
 </body>
 </html>

@@ -31,6 +31,7 @@
         "@tonaljs/time-signature": "^4.8.0",
         "blotter.js": "^0.1.0",
         "ignore-warnings": "^0.2.1",
+        "moment": "^2.29.4",
         "p5": "^1.5.0",
         "paper": "^0.12.17",
         "particle.js": "^1.0.7",

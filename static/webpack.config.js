@@ -11,7 +11,7 @@ module.exports = {
         audio: path.resolve(__dirname, "src", "js", "audio.js"),
         sparkle: path.resolve(__dirname, "src", "js", "sparkle.js"),
         rectangle: path.resolve(__dirname, "src", "js", "rectangle.js"),
-        text :path.resolve(__dirname, "src", "js", "text.js"),
+        textAnimate :path.resolve(__dirname, "src", "js", "textAnimate.js"),
     },
     mode: "development",
     target: "web",

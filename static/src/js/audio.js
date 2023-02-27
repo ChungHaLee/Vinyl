@@ -1,7 +1,7 @@
 'use strict';
 
 
-let audio, file;
+let audio, file, output, rAF;
 let analyser, src, bufferLength, dataArray, audio_context;
 let chroma, maxChroma, energy, amplitudeSpectrum;
 
@@ -38,10 +38,10 @@ theothersideButton.addEventListener('play', function() {
 
 
 
-
 function meydaAnalyser(audio) {
     
     audio_context = audio_context || new AudioContext();
+
     if (!src) {
         analyser = audio_context.createAnalyser();
         src = audio_context.createMediaElementSource(audio)
@@ -71,4 +71,4 @@ function meydaAnalyser(audio) {
 
 
 
-export { meydaAnalyser, energy }
+export { meydaAnalyser, energy, audio_context }
