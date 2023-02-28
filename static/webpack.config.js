@@ -11,10 +11,13 @@ module.exports = {
         audio: path.resolve(__dirname, "src", "js", "audio.js"),
         sparkle: path.resolve(__dirname, "src", "js", "sparkle.js"),
         rectangle: path.resolve(__dirname, "src", "js", "rectangle.js"),
-        textAnimate :path.resolve(__dirname, "src", "js", "textAnimate.js"),
+        textAnimate: path.resolve(__dirname, "src", "js", "textAnimate.js"),
+        starfield: path.resolve(__dirname, "src", "js", "starfield.js")
     },
+
     mode: "development",
     target: "web",
+
     devServer: {hot: false},
     output: {
         path: path.resolve(__dirname, "src", "js", "dist"),

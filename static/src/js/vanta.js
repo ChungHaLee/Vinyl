@@ -3,7 +3,7 @@ const vinylDefault = VANTA.TRUNK({
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
-    minHeight: 1000.00,
+    minHeight: 1100.00,
     minWidth: 1000.00,
     scale: 3.0,
     color: 0xf2be69,
@@ -90,5 +90,12 @@ foreverButton.addEventListener('play', function() {
     vinylDefault.destroy();
     lavenderHaze.destroy();
     goodDays.destroy();
-    
 });
+
+
+const superloveButton = document.getElementById('superlove')
+superloveButton.addEventListener('play', function(){
+    vinylDefault.destroy();
+    lavenderHaze.destroy();
+    goodDays.destroy();
+})

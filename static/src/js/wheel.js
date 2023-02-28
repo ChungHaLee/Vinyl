@@ -43,7 +43,7 @@ var vinylNameFirst;
 
 
 let vantaCanvas = document.getElementsByClassName('vanta-canvas');
-let vantaCanvasP5 = document.getElementsByClassName('p5Canvas vanta-canvas');
+let starCanvas = document.getElementById('c1');
 let particleCanvas = document.getElementsByClassName('particles-js-canvas-el');
 let ptCanvas = document.getElementById('pt_canvas');
 
@@ -180,7 +180,7 @@ function raycasters() {
                 goodDaysButton.play();
                 
             }  else if (i == 6){
-                ptCanvas.style.visibility = 'visible';
+                starCanvas.style.visibility = 'visible';
                 theothersideButton.play();
                 
 

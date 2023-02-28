@@ -29,13 +29,10 @@
     visibility: visible;
  }
 
- /* div#vanta-background:nth-child(1){
-   z-index: 4
- }
 
- div#vanta-background:nth-child(1){
-   z-index: 5
- } */
+canvas#c1{
+   visibility: hidden;
+}
 
 
 canvas.vanta-canvas{
@@ -69,7 +66,6 @@ canvas.particles-js-canvas-el{
     background-repeat: no-repeat;
     background-size: 40%;
     background-position: 50%;
-    /* z-index: 1; */
   }
 
 
@@ -78,15 +74,19 @@ canvas.particles-js-canvas-el{
    background-color: #160d0d;
 } */
 
-/* h1{
+h1{
    display: inline-block;
-} */
+}
 
 span{
    position: relative;
    z-index: 1;
 }
 
+
+
+
+/* lyrics text */
 #text-lavenderHaze{
    font-family: 'Gloock', serif;
    visibility: hidden;
@@ -98,7 +98,7 @@ span{
 
 .ml13 {
    z-index: 1;
-   font-size: 60.0 em;
+   font-size: 100.0 em;
    letter-spacing: 0.7em;
    font-weight: 600;
    background-color: transparent;
@@ -108,4 +108,38 @@ span{
    z-index: 1;
    display: inline-block;
    line-height: 1em;
+ }
+
+
+ #text-forever{
+   /* font-family: 'Gloock', serif; */
+   margin-top: -5%;
+   visibility: hidden;
+   z-index: 1;
+   color: white;
+   text-align: center;
+ }
+
+
+ .ml4 {
+   z-index: 1;
+   position: relative;
+   font-weight: 800;
+   font-size: 5.0em;
+ }
+
+ .ml4 .letters {
+   z-index: 1;
+   /* display: inline-block; */
+   position: absolute;
+   margin: auto;
+   left: 0;
+   top: 0;
+   right: 0;
+   opacity: 0; 
+ }
+
+ #text-forever > h1 > span.letters.letters-1{
+   z-index: 1;
+   width: 400px
  }
