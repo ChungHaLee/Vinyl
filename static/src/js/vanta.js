@@ -40,7 +40,7 @@ const goodDays = VANTA.BIRDS({
     minWidth: 1000.00,
     scale: 1.00,
     scaleMobile: 1.00,
-    backgroundColor: 0x849184,
+    backgroundColor: '0x28211e',
     color1: 0xdc8fbe,
     color2: 0x23f0,
     colorMode: "variance",
@@ -95,6 +95,14 @@ foreverButton.addEventListener('play', function() {
 
 const superloveButton = document.getElementById('superlove')
 superloveButton.addEventListener('play', function(){
+    vinylDefault.destroy();
+    lavenderHaze.destroy();
+    goodDays.destroy();
+})
+
+
+const perfectButton = document.getElementById('perfect')
+perfectButton.addEventListener('play', function(){
     vinylDefault.destroy();
     lavenderHaze.destroy();
     goodDays.destroy();

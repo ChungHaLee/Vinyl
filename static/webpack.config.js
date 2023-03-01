@@ -12,7 +12,8 @@ module.exports = {
         sparkle: path.resolve(__dirname, "src", "js", "sparkle.js"),
         rectangle: path.resolve(__dirname, "src", "js", "rectangle.js"),
         textAnimate: path.resolve(__dirname, "src", "js", "textAnimate.js"),
-        starfield: path.resolve(__dirname, "src", "js", "starfield.js")
+        starfield: path.resolve(__dirname, "src", "js", "starfield.js"),
+        storm: path.resolve(__dirname, "src", "js", "storm.js"),
     },
 
     mode: "development",

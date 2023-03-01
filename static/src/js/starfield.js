@@ -5,13 +5,33 @@ canvas.height = window.innerHeight; //screem height
 
 //on mouse scroll changes speed and color
 // 이 부분 수정하기
-window.addEventListener('wheel', (event) => {
-  c.strokeStyle = 'rgb('+Math.random()*255+', '+Math.random()*255+', '+Math.random()*255+')';
-  if (event.deltaY < 0) speed *= 1.1;
-  else speed *= 0.9;
-  if (speed < 0.01) speed = 0.01;
-  else if (speed > 0.1) speed = 0.1;
-});
+
+function starField_faster(){
+    c.fillStyle = "#861388";
+    c.strokeStyle = '#ff3562';
+    speed = 1.9;
+}
+
+function starField_plain(){
+    c.fillStyle = "#f0c808";
+    c.strokeStyle = '#086788';
+    speed *= 0.08;
+}
+
+function starField_slower(){
+    c.fillStyle = "#27187e";
+    c.strokeStyle = '#ff8600';
+    speed *= 0.001;
+}
+
+
+// window.addEventListener('wheel', (event) => {
+//     c.strokeStyle = 'rgb('+Math.random()*255+', '+Math.random()*255+', '+Math.random()*255+')';
+//     if (event.deltaY < 0) speed *= 1.1;
+//     else speed *= 0.9;
+//     if (speed < 0.01) speed = 0.01;
+//     else if (speed > 0.1) speed = 0.1;
+//   });
 
 class Star {
   constructor() {
@@ -72,3 +92,6 @@ function draw() {
 }
 
 draw();
+
+
+export { starField_faster, starField_plain, starField_slower }

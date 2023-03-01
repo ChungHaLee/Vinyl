@@ -28,7 +28,9 @@ function countUpTimer(){
     var time = hour + ":" + minute + ":" + seconds;
     let i = 0;
 
+    console.log(time)
 
+    // console.log(time)
     if (lavenderHazeButton.played.length == 1){
         timestamps = Object.keys(lavenderHaze)
         lyrics = Object.values(lavenderHaze)
@@ -37,14 +39,15 @@ function countUpTimer(){
         lyrics = Object.values(forever)
     }
 
-
-    while (i < timestamps.length){
+    // 가사가 시각화에 포함된 경우
+    while (timestamps != undefined && i < timestamps.length){
         timeNow = timestamps[i]
         timeNowList = timeNow.split('-')
         timeStart = timeNowList[0]
         timeEnd = timeNowList[1]
         if (time == timeStart && lavenderHazeButton.played.length == 1){
             text_lavenderHaze.style.visibility = 'visible';
+            // text_lavenderHaze.style.display = '';
             textWrapper_ml13.innerHTML = lyrics[i].replace(/\S/g, "<span class='letter'>$&</span>");
             anime_slowUp();
         } else if (time == timeStart && foreverButton.played.length == 1){
@@ -54,6 +57,9 @@ function countUpTimer(){
         }
         i++;
     }
+
+    // 가사가 시각화에 없는 경우
+
 }
 
 
@@ -130,5 +136,11 @@ foreverButton.addEventListener('play', function () {
     setInterval(countUpTimer, 1000); // 1초에 한번씩 CountUpTimer 실행
     anime_popUp();
 })
+
+
+theotherside.addEventListener('play', function (){
+    setInterval(countUpTimer, 1000); // 1초에 한번씩 CountUpTimer 실행
+})
+
 
 clearInterval();

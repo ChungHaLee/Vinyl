@@ -1,5 +1,6 @@
 import { TextureLoader } from "three";
 import { sparkling, startFauxClicking, fauxClick } from './sparkle.js'
+import { starField_faster, starField_slower, starField_plain } from './starfield.js'
 import { rectangle } from './rectangle.js'
 import { energy } from './audio.js'
 import { lavenderHazeTextFunc } from './text.js' 
@@ -20,11 +21,14 @@ const center_of_wheel = { x: 0, y: 0 }
 const groupCards = new THREE.Group();
 
 const lavenderHazeButton = document.getElementById('lavenderHaze');
+const perfectButton = document.getElementById('perfect')
 const foreverButton = document.getElementById('forever');
 const goodDaysButton = document.getElementById('goodDays');
 const obsessedButton = document.getElementById('obsessed');
 const theothersideButton = document.getElementById('theotherside');
 const superloveButton = document.getElementById('superlove');
+
+const text_lavenderHaze = document.getElementById('text-lavenderHaze')
 
 let width, height;
 
@@ -45,7 +49,7 @@ var vinylNameFirst;
 let vantaCanvas = document.getElementsByClassName('vanta-canvas');
 let starCanvas = document.getElementById('c1');
 let particleCanvas = document.getElementsByClassName('particles-js-canvas-el');
-let ptCanvas = document.getElementById('pt_canvas');
+let sketchCanvas = document.getElementsByClassName('sketch');
 
 
 
@@ -81,7 +85,6 @@ for (let i = 0; i < number_of_images; i++) {
     groupCards.add(mesh);
     // add group to scene
     scene.add(groupCards);
-    // console.log(groupCards)
 }
 
 
@@ -161,7 +164,11 @@ function raycasters() {
             }  else if (i == 0){
                 vantaCanvas[0].style.visibility = 'visible';
                 obsessedButton.play();
-            
+            }
+               else if (i == 1){
+                sketchCanvas[0].style.visibility = 'visible';
+                text_lavenderHaze.style.display = 'none';
+                perfectButton.play();
 
             }  else if (i == 2){
                 particleCanvas[0].style.visibility = 'visible';
@@ -171,7 +178,6 @@ function raycasters() {
 
             }  else if (i == 4){
                 vantaCanvas[0].style.visibility = 'visible';
-                // lavenderHazeTextFunc();
                 lavenderHazeButton.play();
             
 
@@ -255,21 +261,24 @@ function animate() {
 
     // the other side
     FrameRate = FrameRate + 1
-    // 이 부분을 pitch 랑 매핑
-    if (FrameRate % 8 == 0){
-        width = window.innerWidth/2
-        height = (energy * 2)
-        // console.log(height);
-        rectangle(width, height);
+    if (FrameRate % 150 < 40){        
+        starField_plain();
+    } else if (FrameRate % 120 < 80){
+        starField_slower();
+    } else {
+        starField_faster();
+    }
+
     
+    if (energy > 20 ){
+        startFauxClicking();
     }
 
     // obsessed
-    if (energy > 20) {
-       startFauxClicking();
-    //    gubunja_chaosSizeBig();
-    }
-    // console.log(energy)
+    // if (energy > 20) {
+    // //    startFauxClicking();
+    // }
+
 }
 
 
