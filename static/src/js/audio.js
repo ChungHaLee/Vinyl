@@ -41,6 +41,12 @@ superloveButton.addEventListener('play', function() {
 });
 
 
+const dreamsButton = document.getElementById('dreams')
+dreamsButton.addEventListener('play', function() {
+    meydaAnalyser(dreamsButton);
+});
+
+
 
 function meydaAnalyser(audio) {
     

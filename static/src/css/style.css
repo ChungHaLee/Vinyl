@@ -55,6 +55,9 @@ div#particles-js{
 }
 
 
+div#pt_canvas_container{
+   visibility: hidden;
+}
 
 
 
@@ -152,16 +155,38 @@ span{
  }
 
 
- /* div {
-   position: fixed;
-   background: black;
+
+
+
+ /* body {
+   margin: 0;
+   background: #eee;
+   height: 100vh;
+   min-height: 100vh;
  } */
 
- /* div #sketch{
+ .lines {
+   display: block;
+   visibility: hidden;
+   margin: 0 auto;
+   background: #fff;
    z-index: 2;
-   height: 100%;
+ }
+
+ .brushes {
+   position: absolute;
+   top: 0;
    left: 0;
+   z-index: 1;
+   background: transparent;
+ }
+
+ .status {
    position: fixed;
    top: 0;
-   width: 100%;
- } */
+   left: 10px;
+   color: #777;
+   font-size: 12px;
+   font-family: monospace;
+ }
+

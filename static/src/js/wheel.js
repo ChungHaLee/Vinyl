@@ -27,8 +27,11 @@ const goodDaysButton = document.getElementById('goodDays');
 const obsessedButton = document.getElementById('obsessed');
 const theothersideButton = document.getElementById('theotherside');
 const superloveButton = document.getElementById('superlove');
+const dreamsButton = document.getElementById('dreams');
+
 
 const text_lavenderHaze = document.getElementById('text-lavenderHaze')
+const canvas_sketch = document.getElementsByClassName('sketch')
 
 let width, height;
 
@@ -175,6 +178,10 @@ function raycasters() {
                 superloveButton.play();
                 particleCanvas[0].style.backgroundColor = '#ff6693'
                 particleCanvas[0].style.backgroundImage = "url('https://shkspr.mobi/blog/wp-content/uploads/2015/02/loop2.gif')"
+
+            }  else if (i == 3){
+                dreamsButton.play();
+                text_lavenderHaze.style.display = 'none';
 
             }  else if (i == 4){
                 vantaCanvas[0].style.visibility = 'visible';

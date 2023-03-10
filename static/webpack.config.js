@@ -14,6 +14,7 @@ module.exports = {
         textAnimate: path.resolve(__dirname, "src", "js", "textAnimate.js"),
         starfield: path.resolve(__dirname, "src", "js", "starfield.js"),
         storm: path.resolve(__dirname, "src", "js", "storm.js"),
+        brush: path.resolve(__dirname, "src", "js", "brush.js")
     },
 
     mode: "development",
