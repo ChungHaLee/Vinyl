@@ -3,13 +3,13 @@ const vinylDefault = VANTA.TRUNK({
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
-    minHeight: 1100.00,
+    minHeight: 1000.00,
     minWidth: 1000.00,
     scale: 3.0,
-    color: 0xf2be69,
-    backgroundColor: 0x3083ff,
-    spacing: 0.00,
-    chaos: 0,
+    color: 0xc38c5a,
+    backgroundColor: 0xdfdfe1,
+    spacing: 0.10,
+    chaos: 0.4,
     p5: p5
   })
 
