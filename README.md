@@ -23,9 +23,10 @@ Rotate the Vinyl, Pick the Vinyl You want, Deep Dive to the Visuals of Music.
 
 
 
+
 ## Interactions
 <p align="center">
-  <img width="750" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/46afcf15-cd8a-4a1d-a03e-dd42d276d6a2">
+  <img width="750" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/](https://github.com/ChungHaLee/Vinyl/assets/59073612/d10e0958-3369-4091-842c-dd91ba1ba1c8">
 </p>
 
 
@@ -36,8 +37,9 @@ Since Vinyl is a Music Explorer, <br> You Can Rotate to Explore Your Vinyls Usin
 
 <br>
 
+
 <p align="center">
-  <img width="750" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/6b235a25-1529-4ce3-80b7-7108eeff8dd5">
+  <img width="750" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/3469954c-9d3f-400a-b6be-19f756ab900e">
 </p>
 
 <p align="center">
