@@ -50,31 +50,31 @@ Whenever You Are Ready, Click the Vinyl That You Want to Enjoy, <br> And Immerse
 <br>
 
 
+
 ## Vinyl Examples
 
 #### Lavender Haze, Taylor Swift
 
 | MV | Vinyl | 
 :-------------------------:|:-------------------------:|
-| <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/1a912cdc-64c5-493c-b646-7f158f1cdcdc"> |  <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/44ca5114-9fda-4176-914f-193391dfd00d">| 
+| <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/757af426-6e12-4cd1-9902-fd77d9127b8e"> |  <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/cb6ed595-48e3-4b8b-9af9-cecced1a0c4c">| 
 
 
 #### FOREVER, Jessie Reyez X 6LACK
 
 | MV | Vinyl | 
 :-------------------------:|:-------------------------:|
-| <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/67221c4a-b5ab-4679-93dc-1595baea150d"> |  <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/37e6d333-a210-4448-9a19-0b9f336c0d57">| 
+| <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/e8bd4e72-17b2-42e6-9a7c-c12edcd4ae9e"> |  <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/fed3b9e1-cd95-4dd3-a950-55a85a2e8934">| 
 
 
 #### The Other Side (From Trolls World Tour), SZA X Justin Timberlake
 
 | MV | Vinyl | 
 :-------------------------:|:-------------------------:|
-| <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/a68a98d4-754d-4c82-97d9-929135580431"> |  <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/347d9fe3-7ee5-4660-a408-8163177abe9e">| 
+| <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/31f6119d-42cb-4a8f-8e9e-c2cf3052f630"> |  <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/fd44817d-40bd-4d57-9860-42e68d91e1fe">| 
 
 
 <br>
-
 
 
 ## Libraries
