@@ -8,7 +8,7 @@ Vinyl: Music Visual Explorer for Retro Nerds
 ## Table of contents
 * [About Vinyl](#About-Vinyl)
 * [Interaction](#Interaction)
-* [Examples](#Examples)
+* [Vinyl Examples](#Vinul-Examples)
 * [Libraries](#Libraries)
 * [Setup](#Setup)
 
@@ -30,7 +30,7 @@ Rotate the Vinyl, Pick the Vinyl You want, Deep Dive to the Visuals of Music.
 <br>
 
 
-## Examples
+## Vinyl Examples
 
 #### Lavender Haze, Taylor Swift
 
@@ -46,17 +46,14 @@ Rotate the Vinyl, Pick the Vinyl You want, Deep Dive to the Visuals of Music.
 | <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/67221c4a-b5ab-4679-93dc-1595baea150d"> |  <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/37e6d333-a210-4448-9a19-0b9f336c0d57">| 
 
 
-#### The Other Side, 
+#### The Other Side (From Trolls World Tour), SZA X Justin Timberlake
 
 | MV | Vinyl | 
 :-------------------------:|:-------------------------:|
-| <img width="400" height="340" alt="image" src=""> |  <img width="400" height="340" alt="image" src="">| 
-
+| <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/a68a98d4-754d-4c82-97d9-929135580431"> |  <img width="400" height="340" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/347d9fe3-7ee5-4660-a408-8163177abe9e">| 
 
 
 <br>
-
-![ezgif com-video-to-gif (11)](https://github.com/ChungHaLee/Vinyl/assets/59073612/37e6d333-a210-4448-9a19-0b9f336c0d57)
 
 
 
