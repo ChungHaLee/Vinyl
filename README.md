@@ -1,13 +1,11 @@
 # Vinyl
 Vinyl: Music Visual Explorer for Retro Nerds
 
-<img width="850" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/46afcf15-cd8a-4a1d-a03e-dd42d276d6a2">
-
-
+<br>
 
 ## Table of contents
 * [About Vinyl](#About-Vinyl)
-* [Interaction](#Interaction)
+* [Interactions](#Interactions)
 * [Vinyl Examples](#Vinul-Examples)
 * [Libraries](#Libraries)
 * [Setup](#Setup)
@@ -23,8 +21,28 @@ Rotate the Vinyl, Pick the Vinyl You want, Deep Dive to the Visuals of Music.
 <br>
 
 
-## Interaction
 
+
+## Interactions
+<p align="center">
+  <img width="750" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/46afcf15-cd8a-4a1d-a03e-dd42d276d6a2">
+</p>
+
+
+<p align="center">
+Since Vinyl is a Music Explorer, <br> You Can Rotate to Explore Your Vinyls Using the Mouse Wheel Interaction.
+</p>
+
+
+<br>
+
+<p align="center">
+  <img width="750" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/59073612/6b235a25-1529-4ce3-80b7-7108eeff8dd5">
+</p>
+
+<p align="center">
+Whenever You Are Ready, Click the Vinyl That You Want to Enjoy, <br> And Immerse into the Visualization of Music.
+</p>
 
 
 <br>
