@@ -58,9 +58,8 @@ Rotate the Vinyl, Pick the Vinyl You want, Deep Dive to the Visuals of Music.
 
 
 ## Libraries
-- three.js (3D visualization, https://threejs.org/)
-- coloris (color picker, [https://simonwep.github.io/pickr/](https://github.com/mdbassit/Coloris))
-- pitchy (audio pitch extraction, https://github.com/ianprime0509/pitchy)
+- Vanta.js (3D visualization, https://github.com/tengbao/vanta)
+- particle.js (creating particles, https://github.com/VincentGarreau/particles.js)
 - meyda (audio energy extraction, https://meyda.js.org/audio-features)
 
 <br>
@@ -69,7 +68,8 @@ Rotate the Vinyl, Pick the Vinyl You want, Deep Dive to the Visuals of Music.
 To run this project locally, follow the below.
 
 ```
-$ cd ../DIY-VIZ
+$ cd ../static
 $ npm install
+$ cd ../Vinyl
 $ python app.py
 ```
