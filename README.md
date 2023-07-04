@@ -6,7 +6,7 @@ Vinyl: Music Visual Explorer for Retro Nerds
 ## Table of contents
 * [About Vinyl](#About-Vinyl)
 * [Interactions](#Interactions)
-* [Vinyl Examples](#Vinul-Examples)
+* [Vinyl Examples](#Vinyl-Examples)
 * [Libraries](#Libraries)
 * [Setup](#Setup)
 
