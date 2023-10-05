@@ -25,17 +25,6 @@ Rotate the Vinyl, Pick the Vinyl You want, Deep Dive to the Visuals of Music.
 
 
 ## Interactions
-<p align="center">
-  <img width="750" alt="image" src="https://github.com/ChungHaLee/Vinyl/assets/](https://github.com/ChungHaLee/Vinyl/assets/59073612/d10e0958-3369-4091-842c-dd91ba1ba1c8">
-</p>
-
-
-<p align="center">
-Since Vinyl is a Music Explorer, <br> You Can Rotate to Explore Your Vinyls Using the Mouse Wheel Interaction.
-</p>
-
-
-<br>
 
 
 <p align="center">
@@ -43,7 +32,7 @@ Since Vinyl is a Music Explorer, <br> You Can Rotate to Explore Your Vinyls Usin
 </p>
 
 <p align="center">
-Whenever You Are Ready, Click the Vinyl That You Want to Enjoy, <br> And Immerse into the Visualization of Music.
+Whenever You Are Ready, Pick Up the Vinyl That You Want to Try, <br> And Immerse into the Visualization of Music.
 </p>
 
 
