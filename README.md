@@ -15,8 +15,6 @@ Vinyl: Music Visual Explorer for Retro Nerds
 
 ## About Vinyl
 Vinyl is a Visual Music Explorer For Retro Nerds.
-<br><br>
-Rotate the Vinyl, Pick the Vinyl You want, Deep Dive to the Visuals of Music.
 
 <br>
 
